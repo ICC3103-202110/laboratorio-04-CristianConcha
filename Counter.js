@@ -1,16 +1,18 @@
 
-const view = counter => `   Counter: ${counter}\n\n     
+function view(counter) {
+    return `   Counter: ${counter}\n\n     
     (+) (-)\n\n
     (q) for quit\n`;
+}
+function update(msg, counter) {
 
-const update = (msg, counter) => {
-    
     if (msg === '+') return ++counter;
     else if (msg === '-') return --counter;
     else if (msg === 'q') return false;  
     else return counter;  
 }
-const app = counter => {
+
+function app (counter){
 
     while (true) {
         
@@ -27,3 +29,4 @@ const app = counter => {
     }
 }
 app(0);
+
